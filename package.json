@@ -1,9 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "build": "for d in ./app/*/ ; do (cd \"$d\" && npm run build) & done; wait"
+    "build-bash": "for d in ./app/*/ ; do (cd \"$d\" && npm run build) & done; wait",
+    "build": "gulp build"
   },
   "workspaces": [
     "app/*"
-  ]
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "chalk": "^2.4.1"
+  }
 }
