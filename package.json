@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "build": "for d in ./app/*/ ; do (cd \"$d\" && npm run build) & done; wait"
+  },
   "workspaces": [
     "app/*"
   ]
